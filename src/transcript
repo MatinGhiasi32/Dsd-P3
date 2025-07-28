@@ -13750,3 +13750,624 @@ run -all
 # ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v(55)
 #    Time: 2730 ps  Iteration: 1  Instance: /Karatsuba_tb
 # Break in Module Karatsuba_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v line 55
+# Compile of ALU.v was successful.
+# Compile of ALU_tb.v failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of ALU_tb.v was successful.
+vsim work.ALU_tb
+# End time: 22:41:54 on Jul 28,2025, Elapsed time: 0:32:34
+# Errors: 0, Warnings: 3
+# vsim work.ALU_tb 
+# Start time: 22:41:54 on Jul 28,2025
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+run -all
+# === ALU Extended Testbench ===
+# OP=000 A=28 B=22 => R=50 (exp=50)
+# OP=001 A=6 B=8 => R=65534 (exp=65534)
+# OP=100 A=10 B=32 => R=42 (exp=42)
+# OP=101 A=2 B=40 => R=42 (exp=42)
+# OP=010 A=3 B=4 => R=0 (exp=12)
+# OP=010 A=0 B=123 => R=12 (exp=0)
+# OP=010 A=255 B=255 => R=12 (exp=65025)
+# OP=010 A=10 B=20 => R=65025 (exp=200)
+# OP=010 A=123 B=456 => R=65025 (exp=56088)
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v(96)
+#    Time: 1340 ns  Iteration: 1  Instance: /ALU_tb
+# Break in Module ALU_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v line 96
+# Compile of ALU_tb.v was successful.
+vsim work.ALU_tb
+# End time: 22:49:25 on Jul 28,2025, Elapsed time: 0:07:31
+# Errors: 0, Warnings: 2
+# vsim work.ALU_tb 
+# Start time: 22:49:25 on Jul 28,2025
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+run -all
+# === ALU Extended Testbench ===
+# OP=000 A=28 B=22 => R=50 (exp=50)
+# OP=001 A=6 B=8 => R=65534 (exp=65534)
+# OP=100 A=10 B=32 => R=42 (exp=42)
+# OP=101 A=2 B=40 => R=42 (exp=42)
+# OP=010 A=3 B=4 => R=0 (exp=12)
+# OP=010 A=0 B=123 => R=12 (exp=0)
+# OP=010 A=255 B=255 => R=0 (exp=65025)
+# OP=010 A=10 B=20 => R=65025 (exp=200)
+# OP=010 A=123 B=456 => R=200 (exp=56088)
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v(98)
+#    Time: 1890 ns  Iteration: 1  Instance: /ALU_tb
+# Break in Module ALU_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v line 98
+# Compile of ALU_tb.v was successful.
+vsim work.ALU_tb
+# End time: 22:50:32 on Jul 28,2025, Elapsed time: 0:01:07
+# Errors: 0, Warnings: 2
+# vsim work.ALU_tb 
+# Start time: 22:50:32 on Jul 28,2025
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+run -all
+# === ALU Extended Testbench ===
+# OP=000 A=28 B=22 => R=50 (exp=50)
+# OP=001 A=6 B=8 => R=65534 (exp=65534)
+# OP=100 A=10 B=32 => R=42 (exp=42)
+# OP=101 A=2 B=40 => R=42 (exp=42)
+# OP=010 A=3 B=4 => R=12 (exp=12)
+# OP=010 A=0 B=123 => R=0 (exp=0)
+# OP=010 A=255 B=255 => R=65025 (exp=65025)
+# OP=010 A=10 B=20 => R=200 (exp=200)
+# OP=010 A=123 B=456 => R=24600 (exp=56088)
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v(98)
+#    Time: 1995 ns  Iteration: 0  Instance: /ALU_tb
+# Break in Module ALU_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v line 98
+# Compile of ALU_tb.v was successful.
+vsim work.ALU_tb
+# End time: 22:51:12 on Jul 28,2025, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 2
+# vsim work.ALU_tb 
+# Start time: 22:51:12 on Jul 28,2025
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+run -all
+# === ALU Extended Testbench ===
+# OP=000 A=28 B=22 => R=50 (exp=50)
+# OP=001 A=6 B=8 => R=65534 (exp=65534)
+# OP=100 A=10 B=32 => R=42 (exp=42)
+# OP=101 A=2 B=40 => R=42 (exp=42)
+# OP=010 A=3 B=4 => R=12 (exp=12)
+# OP=010 A=0 B=123 => R=0 (exp=0)
+# OP=010 A=255 B=255 => R=65025 (exp=65025)
+# OP=010 A=10 B=20 => R=200 (exp=200)
+# OP=010 A=123 B=456 => R=24600 (exp=56088)
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v(98)
+#    Time: 2345 ns  Iteration: 0  Instance: /ALU_tb
+# Break in Module ALU_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v line 98
+# Compile of Karatsuba_tb.v was successful.
+vsim work.Karatsuba_tb
+# End time: 22:52:59 on Jul 28,2025, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 2
+# vsim work.Karatsuba_tb 
+# Start time: 22:52:59 on Jul 28,2025
+# Loading work.Karatsuba_tb
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+run -all
+# a = 3, b = 4, Expected = 12, Actual = 12
+# a = 0, b = 123, Expected = 0, Actual = 0
+# a = 255, b = 255, Expected = 65025, Actual = 65025
+# a = 10, b = 20, Expected = 200, Actual = 200
+# a = 123, b = 456, Expected = 56088, Actual = 24600
+# a = 1023, b = 1023, Expected = 1046529, Actual = 655105
+# a = 1, b = 65535, Expected = 65535, Actual = 391935
+# a = 30000, b = 2, Expected = 60000, Actual = 65376
+# a = 123, b = 456, Expected = 56088, Actual = 59928
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v(56)
+#    Time: 3070 ps  Iteration: 1  Instance: /Karatsuba_tb
+# Break in Module Karatsuba_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v line 56
+vsim work.tb_MultShiftAdd
+# End time: 22:54:57 on Jul 28,2025, Elapsed time: 0:01:58
+# Errors: 0, Warnings: 1
+# vsim work.tb_MultShiftAdd 
+# Start time: 22:54:57 on Jul 28,2025
+# Loading work.tb_MultShiftAdd
+# Loading work.MultShiftAdd
+run -all
+# a = 3, b = 4, expected = 12, actual = 12
+# a = 0, b = 123, expected = 0, actual = 0
+# a = 255, b = 255, expected = 65025, actual = 65025
+# a = 10, b = 20, expected = 200, actual = 200
+# a = 123, b = 456, expected = 56088, actual = 56088
+# a = 1023, b = 1023, expected = 1046529, actual = 1046529
+# a = 1, b = 65535, expected = 65535, actual = 65535
+# a = 30000, b = 2, expected = 60000, actual = 60000
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb_MultShiftAdd.v(76)
+#    Time: 1450 ns  Iteration: 1  Instance: /tb_MultShiftAdd
+# Break in Module tb_MultShiftAdd at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb_MultShiftAdd.v line 76
+# Compile of Karatsuba_tb.v was successful.
+vsim work.Karatsuba_tb
+# End time: 22:56:12 on Jul 28,2025, Elapsed time: 0:01:15
+# Errors: 0, Warnings: 2
+# vsim work.Karatsuba_tb 
+# Start time: 22:56:12 on Jul 28,2025
+# Loading work.Karatsuba_tb
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+run -all
+# a = 3, b = 4, Expected = 12, Actual = 12
+# a = 0, b = 123, Expected = 0, Actual = 0
+# a = 255, b = 255, Expected = 65025, Actual = 65025
+# a = 10, b = 20, Expected = 200, Actual = 200
+# a = 123, b = 456, Expected = 56088, Actual = 24600
+# a = 1023, b = 1023, Expected = 1046529, Actual = 655105
+# a = 1, b = 65535, Expected = 65535, Actual = 391935
+# a = 30000, b = 2, Expected = 60000, Actual = 65376
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v(55)
+#    Time: 3455 ps  Iteration: 0  Instance: /Karatsuba_tb
+# Break in Module Karatsuba_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v line 55
+# Compile of Karatsuba.v was successful.
+vsim work.Karatsuba_tb
+# End time: 22:57:20 on Jul 28,2025, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 2
+# vsim work.Karatsuba_tb 
+# Start time: 22:57:20 on Jul 28,2025
+# Loading work.Karatsuba_tb
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+run -all
+# a = 3, b = 4, Expected = 12, Actual = 12
+# a = 0, b = 123, Expected = 0, Actual = 0
+# a = 255, b = 255, Expected = 65025, Actual = 65025
+# a = 10, b = 20, Expected = 200, Actual = 200
+# a = 123, b = 456, Expected = 56088, Actual = 56088
+# a = 1023, b = 1023, Expected = 1046529, Actual = 1046529
+# a = 1, b = 65535, Expected = 65535, Actual = 65535
+# a = 30000, b = 2, Expected = 60000, Actual = 60000
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v(55)
+#    Time: 3535 ps  Iteration: 0  Instance: /Karatsuba_tb
+# Break in Module Karatsuba_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v line 55
+vsim work.ALU_tb
+# End time: 22:57:38 on Jul 28,2025, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 1
+# vsim work.ALU_tb 
+# Start time: 22:57:38 on Jul 28,2025
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+run -all
+# === ALU Extended Testbench ===
+# OP=000 A=28 B=22 => R=50 (exp=50)
+# OP=001 A=6 B=8 => R=65534 (exp=65534)
+# OP=100 A=10 B=32 => R=42 (exp=42)
+# OP=101 A=2 B=40 => R=42 (exp=42)
+# OP=010 A=3 B=4 => R=12 (exp=12)
+# OP=010 A=0 B=123 => R=0 (exp=0)
+# OP=010 A=255 B=255 => R=65025 (exp=65025)
+# OP=010 A=10 B=20 => R=200 (exp=200)
+# OP=010 A=123 B=456 => R=56088 (exp=56088)
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v(98)
+#    Time: 2395 ns  Iteration: 0  Instance: /ALU_tb
+# Break in Module ALU_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v line 98
+# Compile of ALU_tb.v was successful.
+vsim work.ALU_tb
+# End time: 22:58:19 on Jul 28,2025, Elapsed time: 0:00:41
+# Errors: 0, Warnings: 2
+# vsim work.ALU_tb 
+# Start time: 22:58:19 on Jul 28,2025
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+run
+run -all
+# === ALU Extended Testbench ===
+# OP=000 A=28 B=22 => R=50 (exp=50)
+# OP=001 A=6 B=8 => R=65534 (exp=65534)
+# OP=100 A=10 B=32 => R=42 (exp=42)
+# OP=101 A=2 B=40 => R=42 (exp=42)
+# OP=010 A=3 B=4 => R=0 (exp=12)
+# OP=010 A=0 B=123 => R=12 (exp=0)
+# OP=010 A=255 B=255 => R=0 (exp=65025)
+# OP=010 A=10 B=20 => R=65025 (exp=200)
+# OP=010 A=123 B=456 => R=200 (exp=56088)
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v(98)
+#    Time: 1945 ns  Iteration: 0  Instance: /ALU_tb
+# Break in Module ALU_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v line 98
+# Compile of ALU_tb.v was successful.
+vsim work.ALU_tb
+# End time: 22:58:54 on Jul 28,2025, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 2
+# vsim work.ALU_tb 
+# Start time: 22:58:54 on Jul 28,2025
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+run -all
+# === ALU Extended Testbench ===
+# OP=000 A=28 B=22 => R=50 (exp=50)
+# OP=001 A=6 B=8 => R=65534 (exp=65534)
+# OP=100 A=10 B=32 => R=42 (exp=42)
+# OP=101 A=2 B=40 => R=42 (exp=42)
+# OP=010 A=3 B=4 => R=12 (exp=12)
+# OP=010 A=0 B=123 => R=0 (exp=0)
+# OP=010 A=255 B=255 => R=65025 (exp=65025)
+# OP=010 A=10 B=20 => R=200 (exp=200)
+# OP=010 A=123 B=456 => R=56088 (exp=56088)
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v(98)
+#    Time: 2145 ns  Iteration: 0  Instance: /ALU_tb
+# Break in Module ALU_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v line 98
+# Compile of ALU_tb.v was successful.
+vsim work.ALU_tb
+# End time: 22:59:35 on Jul 28,2025, Elapsed time: 0:00:41
+# Errors: 0, Warnings: 2
+# vsim work.ALU_tb 
+# Start time: 22:59:36 on Jul 28,2025
+# Loading work.ALU_tb
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+run -all
+# === ALU Extended Testbench ===
+# OP=000 A=28 B=22 => R=50 (exp=50)
+# OP=001 A=6 B=8 => R=65534 (exp=65534)
+# OP=100 A=10 B=32 => R=42 (exp=42)
+# OP=101 A=2 B=40 => R=42 (exp=42)
+# OP=010 A=3 B=4 => R=12 (exp=12)
+# OP=010 A=0 B=123 => R=0 (exp=0)
+# OP=010 A=255 B=255 => R=65025 (exp=65025)
+# OP=010 A=10 B=20 => R=200 (exp=200)
+# OP=010 A=123 B=456 => R=56088 (exp=56088)
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v(98)
+#    Time: 1995 ns  Iteration: 0  Instance: /ALU_tb
+# Break in Module ALU_tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v line 98
+# Compile of ALU.v was successful.
+# Compile of BorrowSelectSubtractor.v was successful.
+# Compile of CarrySelectAdder.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of CPU.v failed with 1 errors.
+# Compile of DFF.v was successful.
+# Compile of FullAdder.v was successful.
+# Compile of Karatsuba.v was successful.
+# Compile of MultShiftAdd.v was successful.
+# Compile of mux.v was successful.
+# Compile of ProgramCounter.v was successful.
+# Compile of RAM.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of RippleCarryAdder.v was successful.
+# Compile of tb.v was successful.
+# Compile of ALU_tb.v was successful.
+# Compile of Karatsuba_tb.v was successful.
+# Compile of tb_MultShiftAdd.v was successful.
+# 19 compiles, 1 failed with 1 error.
+# Compile of ALU.v was successful.
+# Compile of BorrowSelectSubtractor.v was successful.
+# Compile of CarrySelectAdder.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of CPU.v was successful.
+# Compile of DFF.v was successful.
+# Compile of FullAdder.v was successful.
+# Compile of Karatsuba.v was successful.
+# Compile of MultShiftAdd.v was successful.
+# Compile of mux.v was successful.
+# Compile of ProgramCounter.v was successful.
+# Compile of RAM.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of RippleCarryAdder.v was successful.
+# Compile of tb.v was successful.
+# Compile of ALU_tb.v was successful.
+# Compile of Karatsuba_tb.v was successful.
+# Compile of tb_MultShiftAdd.v was successful.
+# 19 compiles, 0 failed with no errors.
+# Compile of ALU.v was successful.
+# Compile of BorrowSelectSubtractor.v was successful.
+# Compile of CarrySelectAdder.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of CPU.v was successful.
+# Compile of DFF.v was successful.
+# Compile of FullAdder.v was successful.
+# Compile of Karatsuba.v was successful.
+# Compile of MultShiftAdd.v was successful.
+# Compile of mux.v was successful.
+# Compile of ProgramCounter.v was successful.
+# Compile of RAM.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of RippleCarryAdder.v was successful.
+# Compile of tb.v was successful.
+# Compile of ALU_tb.v was successful.
+# Compile of Karatsuba_tb.v was successful.
+# Compile of tb_MultShiftAdd.v was successful.
+# 19 compiles, 0 failed with no errors.
+vsim work.tb
+# End time: 23:11:22 on Jul 28,2025, Elapsed time: 0:11:46
+# Errors: 0, Warnings: 4
+# vsim work.tb 
+# Start time: 23:11:22 on Jul 28,2025
+# Loading work.tb
+# Loading work.CPU
+# Loading work.ControlUnit
+# Loading work.RegisterFile
+# Loading work.Register
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RAM
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+# ** Error: (vsim-3063) Port 'noop' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/cpu/CU File: C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CPU.v Line: 43
+# Error loading design
+# End time: 23:11:23 on Jul 28,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+vsim work.tb
+# vsim work.tb 
+# Start time: 23:11:27 on Jul 28,2025
+# Loading work.tb
+# Loading work.CPU
+# Loading work.ControlUnit
+# Loading work.RegisterFile
+# Loading work.Register
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RAM
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+# ** Error: (vsim-3063) Port 'noop' not found in the connected module (4th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/cpu/CU File: C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CPU.v Line: 43
+# Error loading design
+# End time: 23:11:27 on Jul 28,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# Compile of ALU.v was successful.
+# Compile of BorrowSelectSubtractor.v was successful.
+# Compile of CarrySelectAdder.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of CPU.v was successful.
+# Compile of DFF.v was successful.
+# Compile of FullAdder.v was successful.
+# Compile of Karatsuba.v was successful.
+# Compile of MultShiftAdd.v was successful.
+# Compile of mux.v was successful.
+# Compile of ProgramCounter.v was successful.
+# Compile of RAM.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of RippleCarryAdder.v was successful.
+# Compile of tb.v was successful.
+# Compile of ALU_tb.v was successful.
+# Compile of Karatsuba_tb.v was successful.
+# Compile of tb_MultShiftAdd.v was successful.
+# 19 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 23:12:43 on Jul 28,2025
+# Loading work.tb
+# Loading work.CPU
+# Loading work.ControlUnit
+# Loading work.RegisterFile
+# Loading work.Register
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RAM
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CU'.  Expected 12, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/cpu/CU File: C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CPU.v Line: 43
+# ** Warning: (vsim-3722) C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CPU.v(43): [TFMPC] - Missing connection for port 'start_mul'.
+# Compile of ALU.v was successful.
+# Compile of BorrowSelectSubtractor.v was successful.
+# Compile of CarrySelectAdder.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of CPU.v failed with 1 errors.
+# Compile of DFF.v was successful.
+# Compile of FullAdder.v was successful.
+# Compile of Karatsuba.v was successful.
+# Compile of MultShiftAdd.v was successful.
+# Compile of mux.v was successful.
+# Compile of ProgramCounter.v was successful.
+# Compile of RAM.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of RippleCarryAdder.v was successful.
+# Compile of tb.v was successful.
+# Compile of ALU_tb.v was successful.
+# Compile of Karatsuba_tb.v was successful.
+# Compile of tb_MultShiftAdd.v was successful.
+# 19 compiles, 1 failed with 1 error.
+# Compile of ALU.v was successful.
+# Compile of BorrowSelectSubtractor.v was successful.
+# Compile of CarrySelectAdder.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of CPU.v was successful.
+# Compile of DFF.v was successful.
+# Compile of FullAdder.v was successful.
+# Compile of Karatsuba.v was successful.
+# Compile of MultShiftAdd.v was successful.
+# Compile of mux.v was successful.
+# Compile of ProgramCounter.v was successful.
+# Compile of RAM.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of RippleCarryAdder.v was successful.
+# Compile of tb.v was successful.
+# Compile of ALU_tb.v was successful.
+# Compile of Karatsuba_tb.v was successful.
+# Compile of tb_MultShiftAdd.v was successful.
+# 19 compiles, 0 failed with no errors.
+vsim work.tb
+# End time: 23:14:59 on Jul 28,2025, Elapsed time: 0:02:16
+# Errors: 0, Warnings: 6
+# vsim work.tb 
+# Start time: 23:14:59 on Jul 28,2025
+# Loading work.tb
+# Loading work.CPU
+# Loading work.ControlUnit
+# Loading work.RegisterFile
+# Loading work.Register
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RAM
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+run -all
+# === Final Register File ===
+# R0 = 0 (expected = 2)
+# R1 = 5 (expected = 35)
+# R2 = 7 (expected = 37)
+# R3 = 0 (expected = 39)
+# === Final Data RAM ===
+# RAM[100] = 5 (expected = 5)
+# RAM[101] = 7 (expected = 7)
+# RAM[135] = x (expected = 35)
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v(69)
+#    Time: 1530 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v line 69
+vsim work.tb
+# End time: 23:15:41 on Jul 28,2025, Elapsed time: 0:00:42
+# Errors: 0, Warnings: 1
+# vsim work.tb 
+# Start time: 23:15:41 on Jul 28,2025
+# Loading work.tb
+# Loading work.CPU
+# Loading work.ControlUnit
+# Loading work.RegisterFile
+# Loading work.Register
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.Karatsuba
+# Loading work.MultShiftAdd
+# Loading work.RAM
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+add wave -position insertpoint sim:/tb/*
+add wave -position insertpoint sim:/tb/cpu/*
+add wave -position insertpoint sim:/tb/cpu/RF/*
+run -all
+# === Final Register File ===
+# R0 = 0 (expected = 2)
+# R1 = 5 (expected = 35)
+# R2 = 7 (expected = 37)
+# R3 = 0 (expected = 39)
+# === Final Data RAM ===
+# RAM[100] = 5 (expected = 5)
+# RAM[101] = 7 (expected = 7)
+# RAM[135] = x (expected = 35)
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v(69)
+#    Time: 1530 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v line 69
+# Compile of ALU.v was successful.
+# Compile of BorrowSelectSubtractor.v was successful.
+# Compile of CarrySelectAdder.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of CPU.v was successful.
+# Compile of DFF.v was successful.
+# Compile of FullAdder.v was successful.
+# Compile of Karatsuba.v was successful.
+# Compile of MultShiftAdd.v was successful.
+# Compile of mux.v was successful.
+# Compile of ProgramCounter.v was successful.
+# Compile of RAM.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of RippleCarryAdder.v was successful.
+# Compile of tb.v was successful.
+# Compile of ALU_tb.v was successful.
+# Compile of Karatsuba_tb.v was successful.
+# Compile of tb_MultShiftAdd.v was successful.
+# 19 compiles, 0 failed with no errors.
+vsim work.tb
+# End time: 23:25:56 on Jul 28,2025, Elapsed time: 0:10:15
+# Errors: 0, Warnings: 2
+# vsim work.tb 
+# Start time: 23:25:56 on Jul 28,2025
+# Loading work.tb
+# Loading work.CPU
+# Loading work.ControlUnit
+# Loading work.RegisterFile
+# Loading work.Register
+# Loading work.ALU
+# Loading work.CarrySelectAdder
+# Loading work.BorrowSelectSubtractor
+# Loading work.RAM
+# Loading work.RippleCarryAdder
+# Loading work.mux
+# Loading work.FullAdder
+run -all
+# === Final Register File ===
+# R0 = 2 (expected = 2)
+# R1 = 12 (expected = 12)
+# R2 = 10 (expected = 10)
+# R3 = 12 (expected = 12)
+# === Final Data RAM ===
+# RAM[100] = 5 (expected = 5)
+# RAM[101] = 7 (expected = 7)
+# RAM[112] = 12 (expected = 12)
+# ** Note: $stop    : C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v(69)
+#    Time: 1530 ns  Iteration: 0  Instance: /tb
+# Break in Module tb at C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v line 69

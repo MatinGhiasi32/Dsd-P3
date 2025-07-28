@@ -2,48 +2,45 @@ module Karatsuba (
     input               clk,
     input               rst,
     input               start,
-    input      [15:0]   a,
-    input      [15:0]   b,
+    input  [15:0]       a,
+    input  [15:0]       b,
     output reg [31:0]   product,
     output reg          done
 );
 
     // Split parameters
-    parameter W  = 16;          // input width
-    parameter H  = 8;           // half width
-    parameter SW = H + 1;       // sum width = H+1 bits
+    parameter W = 16;
+    parameter H = 8;
+    parameter SW = 9;
 
-    // Split a and b into high/low halves
+    // Wires for splitting a and b
     wire [H-1:0] a_L = a[H-1:0];
     wire [H-1:0] a_H = a[W-1:H];
     wire [H-1:0] b_L = b[H-1:0];
     wire [H-1:0] b_H = b[W-1:H];
 
-    // Combinational sums for the "middle" product
-    wire [SW-1:0] sumA = a_L + a_H;
-    wire [SW-1:0] sumB = b_L + b_H;
-
-    // Partial products
-    wire [2*H-1:0]    z0;
-    wire [2*H-1:0]    z2;
-    wire [2*SW-1:0]   z1_raw;
-    reg  [2*SW+W-1:0] z1;  // enough bits to hold z1_raw - z2 - z0 without overflow
+    // Sums and z1
+    reg  [SW-1:0] sumA, sumB;
+    wire [2*H-1:0] z0, z2;
+    wire [2*SW-1:0] z1_raw;
+    wire [2*SW:0]   z1_result; 
 
     // FSM states
-    localparam S_IDLE    = 3'd0;
-    localparam S_DO_Z0   = 3'd1;
-    localparam S_DO_Z2   = 3'd2;
-    localparam S_DO_Z1   = 3'd3;
-    localparam S_COMBINE = 3'd4;
-    localparam S_FINISH  = 3'd5;
+    localparam S_IDLE      = 3'd0;
+    localparam S_DO_Z0     = 3'd1;
+    localparam S_DO_Z2     = 3'd2;
+    localparam S_COMP_SUMS = 3'd3;  
+    localparam S_DO_Z1     = 3'd4;
+    localparam S_COMBINE   = 3'd5;
+    localparam S_FINISH    = 3'd6;
 
     reg [2:0] state, next;
 
-    // Multiplier control signals
-    reg  start0, start1, start2;
+    // Multiplier control
+    reg start0, start1, start2;
     wire done0, done1, done2;
 
-    // Instantiate three shift‑and‑add multipliers
+    // Instantiate three small multipliers
     MultShiftAdd #(.WIDTH(H)) mul0 (
         .clk(clk), .rst(rst), .start(start0),
         .a(a_L), .b(b_L), .product(z0), .done(done0)
@@ -59,63 +56,83 @@ module Karatsuba (
         .a(sumA), .b(sumB), .product(z1_raw), .done(done1)
     );
 
-    // State register
+    // Compute z1 result combinatorially
+    assign z1_result = z1_raw - z2 - z0;
+
+    // FSM transition
     always @(posedge clk or posedge rst) begin
-        if (rst)
+        if (rst) begin
             state <= S_IDLE;
-        else
+            product <= 0;
+            done <= 0;
+        end else begin
             state <= next;
+        end
     end
 
-    // Next‑state logic & start‑signals
+    // FSM logic
     always @(*) begin
-        // defaults
-        next   = state;
-        start0 = 1'b0;
-        start1 = 1'b0;
-        start2 = 1'b0;
-        done   = 1'b0;
+        // Defaults
+        start0 = 0;
+        start1 = 0;
+        start2 = 0;
+        done = 0;
+        next = state;
 
         case (state)
             S_IDLE:
                 if (start) next = S_DO_Z0;
 
             S_DO_Z0: begin
-                start0 = 1'b1;
+                start0 = 1;
                 if (done0) next = S_DO_Z2;
             end
 
             S_DO_Z2: begin
-                start2 = 1'b1;
-                if (done2) next = S_DO_Z1;
+                start2 = 1;
+                if (done2) next = S_COMP_SUMS;  // Go to sum computation
+            end
+            
+            // NEW STATE: Compute sums
+            S_COMP_SUMS: begin
+                next = S_DO_Z1;
             end
 
             S_DO_Z1: begin
-                start1 = 1'b1;
+                start1 = 1;
                 if (done1) next = S_COMBINE;
             end
 
-            S_COMBINE:
+            S_COMBINE: begin
                 next = S_FINISH;
+            end
 
             S_FINISH: begin
-                done = 1'b1;
-                if (!start)
-                    next = S_IDLE;
+                done = 1;
+                if (!start) next = S_IDLE;
             end
         endcase
     end
 
-    // Combine partial products once all three are done
+    // Compute sumA and sumB - NOW IN CORRECT STATE
     always @(posedge clk or posedge rst) begin
         if (rst) begin
-            z1      <= 0;
-            product <= 0;
-        end else if (state == S_COMBINE) begin
-            // z1 = (a_L + a_H)*(b_L + b_H) - z2 - z0
-            z1      <= z1_raw - z2 - z0;
-            // product = z2*2^W + z1*2^H + z0
-            product <= (z2 << W) | (z1 << H) | z0;
+            sumA <= 0;
+            sumB <= 0;
+        end else if (state == S_DO_Z2 && done2) begin  // Compute when z2 is done
+            sumA <= a_L + a_H;
+            sumB <= b_L + b_H;
+        end
+    end
+
+    // Compute final product in COMBINE state
+    always @(posedge clk) begin
+        if (state == S_COMBINE) begin
+            // Proper shifts and combination:
+            // product = z2 * 2^(2H) + z1 * 2^H + z0
+            product <= (z2 << (2*H)) + 
+                       (z1_result << H) + 
+                       z0;
         end
     end
 

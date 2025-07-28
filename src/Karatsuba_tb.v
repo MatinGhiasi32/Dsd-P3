@@ -26,7 +26,7 @@ module Karatsuba_tb;
 
             wait (done);
 
-            @(negedge clk);
+            # (10 * CLK_PERIOD); // allow time for result to stabilize
             $display("a = %0d, b = %0d, Expected = %0d, Actual = %0d", 
                      val_a, val_b, expected, product);
         end
