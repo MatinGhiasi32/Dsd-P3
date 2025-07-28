@@ -1,0 +1,127 @@
+C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Karatsuba_tb
+
+Top level modules:
+	Karatsuba_tb
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/FullAdder.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/FullAdder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FullAdder
+
+Top level modules:
+	FullAdder
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RegisterFile.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RegisterFile.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RegisterFile
+
+Top level modules:
+	RegisterFile
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Register.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Register.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Register
+
+Top level modules:
+	Register
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb_MultShiftAdd.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb_MultShiftAdd.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_MultShiftAdd
+
+Top level modules:
+	tb_MultShiftAdd
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CPU.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CPU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module CPU
+
+Top level modules:
+	CPU
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RAM.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RAM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RAM
+
+Top level modules:
+	RAM
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/MultShiftAdd.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/MultShiftAdd.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MultShiftAdd
+
+Top level modules:
+	MultShiftAdd
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/BorrowSelectSubtractor.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/BorrowSelectSubtractor.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module BorrowSelectSubtractor
+
+Top level modules:
+	BorrowSelectSubtractor
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RippleCarryAdder.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RippleCarryAdder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RippleCarryAdder
+
+Top level modules:
+	RippleCarryAdder
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU_tb
+
+Top level modules:
+	ALU_tb
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ProgramCounter.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ProgramCounter.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ProgramCounter
+
+Top level modules:
+	ProgramCounter
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/DFF.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/DFF.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module DFF
+
+Top level modules:
+	DFF
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ControlUnit.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ControlUnit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ControlUnit
+
+Top level modules:
+	ControlUnit
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CarrySelectAdder.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CarrySelectAdder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module CarrySelectAdder
+
+Top level modules:
+	CarrySelectAdder
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/mux.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/mux.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux
+
+Top level modules:
+	mux
+
+} {} {}} C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU.v {1 {vlog -work work -stats=none C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}}

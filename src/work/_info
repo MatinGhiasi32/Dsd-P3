@@ -1,0 +1,513 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/matin/OneDrive/Desktop/foshatimj/Serie 2/Q2
+vALU
+!s110 1753727951
+!i10b 1
+!s100 5[CID]dD^KEnW^TTae[@z1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ID<cJWCUNS96joFZSUa^Po1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src
+w1753632671
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU.v
+!i122 1475
+L0 1 40
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1753727951.000000
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@a@l@u
+vALU_tb
+Z7 !s110 1753727954
+!i10b 1
+!s100 8z<Zk_OigA3VU>_Zd=OXm0
+R0
+IFzE_Vh4dcz?iEC@f>VhS@2
+R1
+R2
+w1753702288
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v
+!i122 1491
+L0 3 55
+R3
+r1
+!s85 0
+31
+Z8 !s108 1753727954.000000
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ALU_tb.v|
+!i113 1
+R5
+R6
+n@a@l@u_tb
+vBorrowSelectSubtractor
+Z9 !s110 1753727952
+!i10b 1
+!s100 SKVMKemah5WhKK^O?iWRz2
+R0
+IDRJf@UD]Cn<d_mnE9D9hj1
+R1
+R2
+w1753616914
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/BorrowSelectSubtractor.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/BorrowSelectSubtractor.v
+!i122 1476
+L0 1 16
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/BorrowSelectSubtractor.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/BorrowSelectSubtractor.v|
+!i113 1
+R5
+R6
+n@borrow@select@subtractor
+vCarrySelectAdder
+R9
+!i10b 1
+!s100 RLRz^oZ]l;fN?^9R0AaJl0
+R0
+IYhnZ^ZA0h[7mOzSn3I]^21
+R1
+R2
+w1753616910
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CarrySelectAdder.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CarrySelectAdder.v
+!i122 1477
+L0 1 64
+R3
+r1
+!s85 0
+31
+Z10 !s108 1753727952.000000
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CarrySelectAdder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CarrySelectAdder.v|
+!i113 1
+R5
+R6
+n@carry@select@adder
+vControlUnit
+R9
+!i10b 1
+!s100 >BHZg^_Kon[J]?dTVizNN1
+R0
+IfdUF7gmbY8MI[[UNS3zUf1
+R1
+R2
+w1753713379
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ControlUnit.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ControlUnit.v
+!i122 1478
+L0 1 81
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ControlUnit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ControlUnit.v|
+!i113 1
+R5
+R6
+n@control@unit
+vCPU
+R9
+!i10b 1
+!s100 9lRV3nl]OigzDfAXK:?DA2
+R0
+I=_z0;i_0]P:lBAakDMaR73
+R1
+R2
+w1753711423
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CPU.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CPU.v
+!i122 1479
+L0 9 170
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CPU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/CPU.v|
+!i113 1
+R5
+R6
+n@c@p@u
+vCPU_tb
+!s110 1753634163
+!i10b 1
+!s100 oB1UFW5T>=C]aGfoQIG872
+R0
+ITjO>9d>;RU[dZeCba?cIO1
+R1
+R2
+w1753634150
+Z11 8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v
+Z12 FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v
+!i122 597
+L0 3 61
+R3
+r1
+!s85 0
+31
+!s108 1753634163.000000
+Z13 !s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v|
+Z14 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb.v|
+!i113 1
+R5
+R6
+n@c@p@u_tb
+vDFF
+R9
+!i10b 1
+!s100 ElAhGI@GIEiWl`QUG<Y:N0
+R0
+IIWIi?=fX0KgQa9QK`KCWa1
+R1
+R2
+w1751890384
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/DFF.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/DFF.v
+!i122 1480
+L0 1 15
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/DFF.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/DFF.v|
+!i113 1
+R5
+R6
+n@d@f@f
+vFullAdder
+R9
+!i10b 1
+!s100 gcaz3?g83WzmE0nM<>jhm3
+R0
+IOdJ3ah>ikR_TDogD`nUZZ3
+R1
+R2
+w1753618801
+Z15 8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/FullAdder.v
+Z16 FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/FullAdder.v
+!i122 1481
+Z17 L0 1 11
+R3
+r1
+!s85 0
+31
+R10
+Z18 !s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/FullAdder.v|
+Z19 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/FullAdder.v|
+!i113 1
+R5
+R6
+n@full@adder
+vfullAdder
+!s110 1753618552
+!i10b 1
+!s100 :GR1gi1lc8GJXPNZIAJIT2
+R0
+IJV^h4K;3`J^ZGhJP0k8iQ2
+R1
+R2
+w1751890426
+R15
+R16
+!i122 34
+R17
+R3
+r1
+!s85 0
+31
+!s108 1753618552.000000
+R18
+R19
+!i113 1
+R5
+R6
+nfull@adder
+vKaratsuba
+R9
+!i10b 1
+!s100 WU<Po5cAM=b_G5XNKF_dV3
+R0
+IW00FDOL7MEW0oMm7ZO:Lk3
+R1
+R2
+w1753727945
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba.v
+!i122 1482
+L0 1 122
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba.v|
+!i113 1
+R5
+R6
+n@karatsuba
+vKaratsuba_tb
+R7
+!i10b 1
+!s100 [cg]ok2PTGZ6o3XKL;Ckb0
+R0
+I[i7ERi;?I5EneZ34ec;E70
+R1
+R2
+w1753727438
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v
+!i122 1492
+L0 1 57
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Karatsuba_tb.v|
+!i113 1
+R5
+R6
+n@karatsuba_tb
+vMultShiftAdd
+Z20 !s110 1753727953
+!i10b 1
+!s100 BI:D:Q3kNo`VC?ZZTM@=l1
+R0
+IXi:ZIedULA>7_@ML[LUf42
+R1
+R2
+w1753727317
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/MultShiftAdd.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/MultShiftAdd.v
+!i122 1483
+L0 1 54
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/MultShiftAdd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/MultShiftAdd.v|
+!i113 1
+R5
+R6
+n@mult@shift@add
+vmux
+R20
+!i10b 1
+!s100 e`=OO0CId9?FQ^HJX;PB]0
+R0
+I;a38fAfR2<0PTFzPBCe5i0
+R1
+R2
+w1753616911
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/mux.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/mux.v
+!i122 1484
+L0 1 8
+R3
+r1
+!s85 0
+31
+Z21 !s108 1753727953.000000
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/mux.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/mux.v|
+!i113 1
+R5
+R6
+vProgramCounter
+R20
+!i10b 1
+!s100 P5hYJWAVClmi@fb]Y<3>K1
+R0
+Ik7NME;BV^zCU;n=@OQ2GH1
+R1
+R2
+w1752689300
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ProgramCounter.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ProgramCounter.v
+!i122 1485
+L0 1 21
+R3
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ProgramCounter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/ProgramCounter.v|
+!i113 1
+R5
+R6
+n@program@counter
+vRAM
+R20
+!i10b 1
+!s100 TN5gSL^jHY]??Pj:mdhcJ1
+R0
+ILhS_T?^PMLP6e0gW]DF?B2
+R1
+R2
+w1753703138
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RAM.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RAM.v
+!i122 1486
+Z22 L0 1 24
+R3
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RAM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RAM.v|
+!i113 1
+R5
+R6
+n@r@a@m
+vRegister
+R20
+!i10b 1
+!s100 <nNQK1e6g3fT7db95T@YX1
+R0
+IX8_M7Pn55d?lSk^4[PWXG3
+R1
+R2
+w1751916679
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Register.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Register.v
+!i122 1487
+L0 1 14
+R3
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/Register.v|
+!i113 1
+R5
+R6
+n@register
+vRegisterFile
+R20
+!i10b 1
+!s100 6H;njED4Z1H;;J?kf`OQS0
+R0
+IRZCl1l27@5KX;c_74eid^1
+R1
+R2
+w1752687744
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RegisterFile.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RegisterFile.v
+!i122 1488
+L0 1 56
+R3
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RegisterFile.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RegisterFile.v|
+!i113 1
+R5
+R6
+n@register@file
+vRippleCarryAdder
+R7
+!i10b 1
+!s100 T=DA9k9P9cOD?bE9i2OD;2
+R0
+I^9JG<d@92l1IAoI<]JI;:2
+R1
+R2
+w1751892937
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RippleCarryAdder.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RippleCarryAdder.v
+!i122 1489
+R22
+R3
+r1
+!s85 0
+31
+R21
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RippleCarryAdder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/RippleCarryAdder.v|
+!i113 1
+R5
+R6
+n@ripple@carry@adder
+vtb
+R7
+!i10b 1
+!s100 eCBcMhJ<dWMdYY7KzAP_o0
+R0
+IHbIljNInd@2JY8R8>OOjf2
+R1
+R2
+w1753713413
+R11
+R12
+!i122 1490
+L0 3 71
+R3
+r1
+!s85 0
+31
+R8
+R13
+R14
+!i113 1
+R5
+R6
+vtb_MultShiftAdd
+R7
+!i10b 1
+!s100 CT=5b1`oo7Y2[8jcIZUIz0
+R0
+Ib1U027GQ5Rbi9HZ4n[VP;1
+R1
+R2
+w1753727459
+8C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb_MultShiftAdd.v
+FC:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb_MultShiftAdd.v
+!i122 1493
+L0 3 77
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb_MultShiftAdd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/matin/Desktop/foshatimj/HW_DSD_CPU_402106229/src/tb_MultShiftAdd.v|
+!i113 1
+R5
+R6
+ntb_@mult@shift@add
