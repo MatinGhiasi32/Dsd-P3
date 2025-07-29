@@ -8,7 +8,7 @@ module RAM (
     output reg [15:0] readValue
 );
 
-    reg [15:0] mem [0:127];
+    reg [15:0] mem [0:255];
 
     always @(*) begin
         if (readEnable) begin

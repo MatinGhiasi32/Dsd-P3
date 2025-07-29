@@ -28,11 +28,16 @@ module ALU #(
         .cout  ()
     );
 
+    reg [31:0] mul_result; 
+
     // ALU operation selection
     always @(*) begin
+        mul_result = a * b;
         case (opcode)
             3'b000, 3'b100, 3'b101: result = result_sum;  // ADD / LOAD / STR
             3'b001:                result = result_sub;   // SUB
+            3'b010:                result = mul_result[15:0]; // MUL
+            3'b011:                 result = (b != 0) ? (a / b) : {WIDTH{1'b0}}; // DIV
             default:               result = {WIDTH{1'b0}};
         endcase
     end
