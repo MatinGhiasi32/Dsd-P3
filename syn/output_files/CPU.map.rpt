@@ -1,0 +1,811 @@
+Analysis & Synthesis report for CPU
+Tue Jul 29 16:17:08 2025
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |CPU
+ 10. Parameter Settings for User Entity Instance: RegisterFile:RF|Register:x0
+ 11. Parameter Settings for User Entity Instance: RegisterFile:RF|Register:x1
+ 12. Parameter Settings for User Entity Instance: RegisterFile:RF|Register:x2
+ 13. Parameter Settings for User Entity Instance: RegisterFile:RF|Register:x3
+ 14. Parameter Settings for User Entity Instance: ALU:ALU0
+ 15. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa
+ 16. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[0].rca
+ 17. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca0
+ 18. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca1
+ 19. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[1].sum_mux
+ 20. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[1].cout_mux
+ 21. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca0
+ 22. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca1
+ 23. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[2].sum_mux
+ 24. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[2].cout_mux
+ 25. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca0
+ 26. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca1
+ 27. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[3].sum_mux
+ 28. Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[3].cout_mux
+ 29. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss
+ 30. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa
+ 31. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[0].rca
+ 32. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca0
+ 33. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca1
+ 34. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[1].sum_mux
+ 35. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[1].cout_mux
+ 36. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca0
+ 37. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca1
+ 38. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[2].sum_mux
+ 39. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[2].cout_mux
+ 40. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca0
+ 41. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca1
+ 42. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[3].sum_mux
+ 43. Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[3].cout_mux
+ 44. Port Connectivity Checks: "ALU:ALU0|BorrowSelectSubtractor:bss"
+ 45. Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca1"
+ 46. Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca0"
+ 47. Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca1"
+ 48. Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca0"
+ 49. Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca1"
+ 50. Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca0"
+ 51. Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa"
+ 52. Elapsed Time Per Partition
+ 53. Analysis & Synthesis Messages
+ 54. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jul 29 16:17:08 2025      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; CPU                                        ;
+; Top-level Entity Name              ; CPU                                        ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 2                                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6E22A7        ;                    ;
+; Top-level entity name                                                      ; CPU                ; CPU                ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path                               ; Used in Netlist ; File Type              ; File Name with Absolute Path                                   ; Library ;
++----------------------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
+; ../Users/avayo/OneDrive/Desktop/DSDP3/RippleCarryAdder.v       ; yes             ; User Verilog HDL File  ; C:/Users/avayo/OneDrive/Desktop/DSDP3/RippleCarryAdder.v       ;         ;
+; ../Users/avayo/OneDrive/Desktop/DSDP3/RegisterFile.v           ; yes             ; User Verilog HDL File  ; C:/Users/avayo/OneDrive/Desktop/DSDP3/RegisterFile.v           ;         ;
+; ../Users/avayo/OneDrive/Desktop/DSDP3/Register.v               ; yes             ; User Verilog HDL File  ; C:/Users/avayo/OneDrive/Desktop/DSDP3/Register.v               ;         ;
+; ../Users/avayo/OneDrive/Desktop/DSDP3/RAM.v                    ; yes             ; User Verilog HDL File  ; C:/Users/avayo/OneDrive/Desktop/DSDP3/RAM.v                    ;         ;
+; ../Users/avayo/OneDrive/Desktop/DSDP3/mux.v                    ; yes             ; User Verilog HDL File  ; C:/Users/avayo/OneDrive/Desktop/DSDP3/mux.v                    ;         ;
+; ../Users/avayo/OneDrive/Desktop/DSDP3/FullAdder.v              ; yes             ; User Verilog HDL File  ; C:/Users/avayo/OneDrive/Desktop/DSDP3/FullAdder.v              ;         ;
+; ../Users/avayo/OneDrive/Desktop/DSDP3/CPU.v                    ; yes             ; User Verilog HDL File  ; C:/Users/avayo/OneDrive/Desktop/DSDP3/CPU.v                    ;         ;
+; ../Users/avayo/OneDrive/Desktop/DSDP3/ControlUnit.v            ; yes             ; User Verilog HDL File  ; C:/Users/avayo/OneDrive/Desktop/DSDP3/ControlUnit.v            ;         ;
+; ../Users/avayo/OneDrive/Desktop/DSDP3/CarrySelectAdder.v       ; yes             ; User Verilog HDL File  ; C:/Users/avayo/OneDrive/Desktop/DSDP3/CarrySelectAdder.v       ;         ;
+; ../Users/avayo/OneDrive/Desktop/DSDP3/BorrowSelectSubtractor.v ; yes             ; User Verilog HDL File  ; C:/Users/avayo/OneDrive/Desktop/DSDP3/BorrowSelectSubtractor.v ;         ;
+; ../Users/avayo/OneDrive/Desktop/DSDP3/ALU.v                    ; yes             ; User Verilog HDL File  ; C:/Users/avayo/OneDrive/Desktop/DSDP3/ALU.v                    ;         ;
++----------------------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 2     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |CPU                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |CPU                ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |CPU ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                             ;
+; ADDR_WIDTH     ; 16    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:RF|Register:x0 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:RF|Register:x1 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:RF|Register:x2 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RegisterFile:RF|Register:x3 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0 ;
++----------------+-------+------------------------------+
+; Parameter Name ; Value ; Type                         ;
++----------------+-------+------------------------------+
+; WIDTH          ; 16    ; Signed Integer               ;
++----------------+-------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; N              ; 16    ; Signed Integer                                    ;
+; BLOCK          ; 4     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[0].rca ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca0 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca1 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[1].sum_mux ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; size           ; 4     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[1].cout_mux ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; size           ; 1     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca0 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca1 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[2].sum_mux ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; size           ; 4     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[2].cout_mux ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; size           ; 1     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca0 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca1 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[3].sum_mux ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; size           ; 4     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[3].cout_mux ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; size           ; 1     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; N              ; 16    ; Signed Integer                                                               ;
+; BLOCK          ; 4     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[0].rca ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca0 ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca1 ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[1].sum_mux ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; size           ; 4     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[1].cout_mux ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; size           ; 1     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca0 ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca1 ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[2].sum_mux ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; size           ; 4     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[2].cout_mux ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; size           ; 1     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca0 ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca1 ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[3].sum_mux ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; size           ; 4     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU0|BorrowSelectSubtractor:bss|CarrySelectAdder:csa|mux:BLOCKS[3].cout_mux ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; size           ; 1     ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU0|BorrowSelectSubtractor:bss" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at GND                         ;
+; cout ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca1" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[3].rca0" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca1" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[2].rca0" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca1" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at VCC                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[1].rca0" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU0|CarrySelectAdder:csa" ;
++------+--------+----------+--------------------------------+
+; Port ; Type   ; Severity ; Details                        ;
++------+--------+----------+--------------------------------+
+; cin  ; Input  ; Info     ; Stuck at GND                   ;
+; cout ; Output ; Info     ; Explicitly unconnected         ;
++------+--------+----------+--------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Tue Jul 29 16:17:06 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/ripplecarryadder.v
+    Info (12023): Found entity 1: RippleCarryAdder
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/registerfile.v
+    Info (12023): Found entity 1: RegisterFile
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/register.v
+    Info (12023): Found entity 1: Register
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/ram.v
+    Info (12023): Found entity 1: RAM
+Warning (12090): Entity "mux" obtained from "../Users/avayo/OneDrive/Desktop/DSDP3/mux.v" instead of from Quartus II megafunction library
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/mux.v
+    Info (12023): Found entity 1: mux
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/multshiftadd.v
+    Info (12023): Found entity 1: MultShiftAdd
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/karatsuba.v
+    Info (12023): Found entity 1: Karatsuba
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/fulladder.v
+    Info (12023): Found entity 1: FullAdder
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/divider.v
+    Info (12023): Found entity 1: Divider
+Warning (12018): Entity "DFF" will be ignored because it conflicts with Quartus II primitive name
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/dff.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/cpu.v
+    Info (12023): Found entity 1: CPU
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/controlunit.v
+    Info (12023): Found entity 1: ControlUnit
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/carryselectadder.v
+    Info (12023): Found entity 1: CarrySelectAdder
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/borrowselectsubtractor.v
+    Info (12023): Found entity 1: BorrowSelectSubtractor
+Info (12021): Found 1 design units, including 1 entities, in source file /users/avayo/onedrive/desktop/dsdp3/alu.v
+    Info (12023): Found entity 1: ALU
+Info (12127): Elaborating entity "CPU" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at CPU.v(27): object "base" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at CPU.v(148): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:CU"
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:RF"
+Info (12128): Elaborating entity "Register" for hierarchy "RegisterFile:RF|Register:x0"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU0"
+Info (12128): Elaborating entity "CarrySelectAdder" for hierarchy "ALU:ALU0|CarrySelectAdder:csa"
+Info (12128): Elaborating entity "RippleCarryAdder" for hierarchy "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[0].rca"
+Info (12128): Elaborating entity "FullAdder" for hierarchy "ALU:ALU0|CarrySelectAdder:csa|RippleCarryAdder:BLOCKS[0].rca|FullAdder:FA[0].fa"
+Info (12128): Elaborating entity "mux" for hierarchy "ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[1].sum_mux"
+Info (12128): Elaborating entity "mux" for hierarchy "ALU:ALU0|CarrySelectAdder:csa|mux:BLOCKS[1].cout_mux"
+Info (12128): Elaborating entity "BorrowSelectSubtractor" for hierarchy "ALU:ALU0|BorrowSelectSubtractor:bss"
+Warning (10230): Verilog HDL assignment warning at BorrowSelectSubtractor.v(8): truncated value with size 32 to match size of target (16)
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:ram"
+Warning (10240): Verilog HDL Always Construct warning at RAM.v(14): inferring latch(es) for variable "readValue", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "readValue[0]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[1]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[2]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[3]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[4]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[5]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[6]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[7]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[8]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[9]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[10]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[11]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[12]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[13]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[14]" at RAM.v(14)
+Info (10041): Inferred latch for "readValue[15]" at RAM.v(14)
+Info (144001): Generated suppressed messages file C:/Matin/output_files/CPU.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "rst"
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4637 megabytes
+    Info: Processing ended: Tue Jul 29 16:17:08 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Matin/output_files/CPU.map.smsg.
+
+

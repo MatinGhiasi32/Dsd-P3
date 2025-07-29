@@ -14,15 +14,11 @@ module CPU #(
     input                    rst
 );
 
-    //----------------------------------------------------------------------
     // 1) Program Counter & Instruction Register
-    //----------------------------------------------------------------------
     reg [ADDR_WIDTH-1:0] PC;
     reg [15:0]           IR;
 
-    //----------------------------------------------------------------------
     // 2) Decode instruction fields
-    //----------------------------------------------------------------------
     wire [2:0]        opcode = IR[15:13];
     wire [1:0]        rd_r   = IR[12:11];
     wire [1:0]        rs1_r  = IR[10:9];
@@ -33,9 +29,7 @@ module CPU #(
 
     wire [DATA_WIDTH-1:0] imm_ext = {{7{imm9[8]}}, imm9};
 
-    //----------------------------------------------------------------------
     // 3) Control Unit
-    //----------------------------------------------------------------------
     wire       cu_regwrite, cu_memwrite, cu_memread;
     wire       cu_alusrc,    cu_memtoreg,   cu_regread;
     wire [1:0] state;
@@ -54,22 +48,16 @@ module CPU #(
         .state     (state)
     );
 
-    //----------------------------------------------------------------------
     // 4) Pre-declare ALU and memory output wires
-    //----------------------------------------------------------------------
     wire [DATA_WIDTH-1:0] alu_out;
     wire [DATA_WIDTH-1:0] memrdata;
 
-    //----------------------------------------------------------------------
     // 5) EX→MEM pipeline registers (EA, SD, MDR)
-    //----------------------------------------------------------------------
     reg [ADDR_WIDTH-1:0] EA;
     reg [DATA_WIDTH-1:0] SD;
     reg [DATA_WIDTH-1:0] MDR;
 
-    //----------------------------------------------------------------------
     // 6) Register File
-    //----------------------------------------------------------------------
     wire [1:0] rf_read2      = cu_regread ? rd_i : rs2_r;
     wire [1:0] rf_write_addr = cu_memtoreg ? rd_i : rd_r;
     wire [DATA_WIDTH-1:0] wb_data = cu_memtoreg ? MDR : alu_out;
@@ -87,9 +75,7 @@ module CPU #(
         .readData2      (op2)
     );
 
-    //----------------------------------------------------------------------
     // 7) ALU (combinational)
-    //----------------------------------------------------------------------
     wire [DATA_WIDTH-1:0] alu_in2 = cu_alusrc ? imm_ext : op2;
     ALU ALU0 (
         .opcode (opcode),
@@ -98,9 +84,7 @@ module CPU #(
         .result (alu_out)
     );
 
-    //----------------------------------------------------------------------
     // 8) Unified RAM
-    //----------------------------------------------------------------------
     reg memread_reg, memwrite_reg;
     reg [ADDR_WIDTH-1:0] memaddr_reg;
     reg [DATA_WIDTH-1:0] memwdata_reg;
@@ -114,23 +98,19 @@ module CPU #(
         .readValue    (memrdata)
     );
 
-    //----------------------------------------------------------------------
     // 9) EX->MEM latches on DEEX
-    //----------------------------------------------------------------------
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             EA  <= 0;
             SD  <= 0;
-            MDR <= 0;
+            // MDR <= 0;   // ← حذف شد تا conflict برطرف بشه
         end else if (state == 2'b01) begin  // DEEX
             EA  <= alu_out;
             SD  <= op2;
         end
     end
 
-    //----------------------------------------------------------------------
-    //10) Memory access logic
-    //----------------------------------------------------------------------
+    // 10) Memory access logic
     always @(*) begin
         memread_reg  = 1'b0;
         memwrite_reg = 1'b0;
@@ -156,9 +136,7 @@ module CPU #(
         endcase
     end
 
-    //----------------------------------------------------------------------
-    //11) PC, IR, MDR updates
-    //----------------------------------------------------------------------
+    // 11) PC, IR, MDR updates
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             PC  <= 0;
